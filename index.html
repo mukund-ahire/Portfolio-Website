@@ -5,21 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mukund Ahire | Portfolio</title>
 
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Portfolio website of Mukund Ahire – Final-year IT student, Java developer, and AI enthusiast." />
     <meta name="author" content="Mukund Ahire" />
     <meta property="og:title" content="Mukund Ahire | Portfolio" />
     <meta property="og:description" content="Portfolio website of Mukund Ahire – Final-year IT student, Java developer, and AI enthusiast." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="avatar.jpg" />
+    <meta property="og:image" content="home-icon.png" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -34,199 +31,333 @@
         },
       }
     </script>
-
-    <!-- AOS Animations -->
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-    <!-- Page Transitions -->
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      .fade-enter-active, .fade-leave-active {
-        transition: opacity 0.5s ease-in-out;
-      }
-      .fade-enter, .fade-leave-to {
-        opacity: 0;
-      }
-    </style>
   </head>
   <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans">
 
-    <div id="page-wrapper" class="fade-enter">
-      <!-- Header -->
-      <header class="fixed top-0 left-0 w-full z-50 backdrop-blur bg-transparent dark:bg-transparent">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
-          <h1 class="text-2xl font-bold">Mukund Ahire</h1>
-          <button id="navToggle" class="md:hidden block">
-            <span class="block w-6 h-0.5 bg-current mb-1"></span>
-            <span class="block w-6 h-0.5 bg-current mb-1"></span>
-            <span class="block w-6 h-0.5 bg-current"></span>
-          </button>
-          <nav id="navMenu" class="hidden md:flex gap-6 items-center">
-            <a href="#about" class="hover:text-indigo-600">About</a>
-            <a href="#projects" class="hover:text-indigo-600">Projects</a>
-            <a href="#skills" class="hover:text-indigo-600">Skills</a>
-            <a href="#blog" class="hover:text-indigo-600">Blog</a>
-            <a href="#contact" class="hover:text-indigo-600">Contact</a>
-            <a href="https://github.com/" target="_blank" aria-label="GitHub">🖥️</a>
-            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">💼</a>
-            <button id="darkToggle" class="ml-4">🌙</button>
+    <div id="page-wrapper">
+      <header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-700/40 bg-white/95 dark:bg-gray-900/60 backdrop-blur">
+        <div class="container relative mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+          <a href="#" class="flex items-center space-x-2 text-lg font-semibold transition-colors hover:text-indigo-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-indigo-600">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <span>Dev.Mukund</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium absolute left-1/2 -translate-x-1/2">
+            <a href="#" class="transition-colors text-gray-500 hover:text-indigo-600">Home</a>
+            <a href="#about" class="transition-colors text-gray-500 hover:text-indigo-600">About</a>
+            <a href="#projects" class="transition-colors text-gray-500 hover:text-indigo-600">Projects</a>
+            <a href="#skills" class="transition-colors text-gray-500 hover:text-indigo-600">Skills</a>
+            <a href="#blog" class="transition-colors text-gray-500 hover:text-indigo-600">Blog</a>
+            <a href="#experience" class="transition-colors text-gray-500 hover:text-indigo-600">Activities</a>
+            <a href="#contact" class="transition-colors text-gray-500 hover:text-indigo-600">Contact</a>
           </nav>
+          <div class="flex items-center">
+            <div class="hidden md:flex items-center gap-2">
+              <a href="https://github.com/mukund-ahire" target="_blank" aria-label="Github" rel="noopener noreferrer" class="p-2 text-gray-500 hover:text-indigo-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/mukund-ahire/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer" class="p-2 text-gray-500 hover:text-indigo-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a href="https://medium.com/@mukundahire.work" target="_blank" aria-label="Medium" rel="noopener noreferrer" class="p-2 text-gray-500 hover:text-indigo-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.45 18.034h1.784V6.05H7.45v11.984Zm5.185-11.984H12.5v11.984h.135l4.312-11.984h.027l4.34 11.984h.134V6.05h-.134v.027l-4.312 11.92L12.635 6.05h-.135Z"></path></svg>
+              </a>
+              <button id="darkToggle" class="ml-2 p-2 text-gray-500 hover:text-indigo-600">🌙</button>
+            </div>
+            <div class="md:hidden">
+              <button id="navToggle" class="p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                <span class="sr-only">Toggle Menu</span>
+              </button>
+            </div>
+          </div>
         </div>
         <div id="mobileMenu" class="fixed inset-0 bg-white dark:bg-gray-900 transform translate-x-full transition-transform duration-300 md:hidden p-8">
-          <button id="navClose" class="mb-4 text-xl">✕</button>
-          <nav class="flex flex-col gap-4">
-            <a href="#about" class="text-lg">About</a>
-            <a href="#projects" class="text-lg">Projects</a>
-            <a href="#skills" class="text-lg">Skills</a>
-            <a href="#blog" class="text-lg">Blog</a>
-            <a href="#contact" class="text-lg">Contact</a>
-            <div class="mt-4 flex gap-4">
-              <a href="https://github.com/" target="_blank" aria-label="GitHub">🐙</a>
-              <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">🔗</a>
-              <button id="darkToggleMobile">🌙</button>
-            </div>
+          <button id="navClose" class="absolute top-5 right-5 mb-4 text-2xl">✕</button>
+          <a href="#" class="flex items-center space-x-2 mb-6 text-lg font-semibold">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-indigo-600"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+             <span>Dev.Mukund</span>
+          </a>
+          <nav class="flex flex-col space-y-3">
+            <a href="#" class="block px-4 py-2 text-base font-medium">Home</a>
+            <a href="#about" class="block px-4 py-2 text-base font-medium">About</a>
+            <a href="#projects" class="block px-4 py-2 text-base font-medium">Projects</a>
+            <a href="#skills" class="block px-4 py-2 text-base font-medium">Skills</a>
+            <a href="#blog" class="block px-4 py-2 text-base font-medium">Blog</a>
+            <a href="#experience" class="block px-4 py-2 text-base font-medium">Activities</a>
+            <a href="#contact" class="block px-4 py-2 text-base font-medium">Contact</a>
           </nav>
         </div>
       </header>
 
-      <!-- Hero Section -->
-      <section class="pt-32 pb-20 bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
-        <div class="max-w-7xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center gap-10">
-          <div class="flex-1 text-center md:text-left" data-aos="fade-right">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">👋 Hi , I'm Mukund !</h2>
-            <span class="text-2xl md:text-3xl" id="typed"></span>
-            <p class="mt-4">I'm passionate about building intelligent systems that solve real-world problems. I love working on data-driven projects, crafting clean UIs, and learning through hands-on experimentation.</p>
-            <a href="Resume_Mukund_Ahire.pdf" download class="mt-6 inline-block px-6 py-2 bg-white text-indigo-700 font-semibold rounded-full shadow hover:bg-gray-200">Download Resume</a>
-          </div>
-          <div class="flex-1" data-aos="fade-left">
-            <img src="hero.png" alt="Mukund Avatar" class="rounded-full shadow-xl mx-auto" width="300px"/>
-          </div>
-        </div>
-      </section>
+      <main>
+        <section class="relative text-center bg-white dark:bg-gray-900">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/50 to-purple-100/50 dark:from-indigo-900/10 dark:to-purple-900/10 backdrop-blur-sm"></div>
+            <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-40 lg:py-48 flex flex-col items-center" data-aos="fade-up">
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
+                    👋 Hi, I'm Mukund!
+                </h1>
+                <span id="typed" class="text-2xl sm:text-3xl mt-4 font-semibold text-indigo-600 dark:text-indigo-400 block h-10"></span>
+                <p class="mt-6 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
+                    Final-year B.E. Information Technology student and certified Google Gen AI Academy graduate. I'm passionate about building intelligent systems that solve real-world problems using clean UIs, data, and AI.
+                </p>
+                <div class="mt-10 flex flex-wrap gap-4 justify-center">
+                    <a href="#projects" class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        Explore My Work
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-5 w-5"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="Resume.pdf" download class="inline-flex items-center justify-center px-8 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        Download Resume
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-5 w-5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mukund-ahire/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        Let’s Connect
+                    </a>
+                </div>
+            </div>
+        </section>
 
-      <!-- About Section -->
-      <section id="about" class="px-6 md:px-16 py-16" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-6 border-b-4 border-indigo-500 inline-block">About Me</h2>
-        <p class="text-lg max-w-3xl">
-          Driven and adaptable technology professional, always eager to learn and embrace new challenges. I excel at solving complex problems and building innovative solutions that make a lasting impact. With a relentless passion for continuous growth, I stay ahead of the curve in emerging technologies. My journey is defined by creativity, perseverance, and a commitment to transforming ideas into reality. Let's connect and explore opportunities to drive meaningful change in the world of technology.
-        </p>
-      </section>
+        <section id="about" class="px-4 sm:px-6 lg:px-8 py-20" data-aos="fade-up">
+          <div class="text-center">
+             <h2 class="text-3xl sm:text-4xl font-bold mb-12 border-b-4 border-indigo-500 inline-block">👨‍💻 About Me</h2>
+          </div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start max-w-7xl mx-auto">
+            <div class="lg:col-span-3">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Who I Am</h3>
+              <div class="text-lg text-gray-700 dark:text-gray-300 space-y-4">
+                  <p>As a highly motivated software professional and B.E. in IT student 👨‍💻 from Pune, I am driven by a deep passion for Artificial Intelligence 🧠. My technical toolkit is built for versatility, featuring Java & Python for backend and machine learning, alongside React & Tailwind CSS for creating dynamic user interfaces 💻. I believe in learning by doing 🚀, a philosophy I've applied to develop projects like a predictive ML model 📈 and a unique 2D time-loop puzzle game 🎮. Beyond my technical work, I've honed my leadership and organizational skills as an Alumni Section Head and Documentation Head 🏆. Ultimately, I am a creative problem-solver focused on transforming complex ideas into impactful, intelligent software solutions 💡.</p>
+              </div>
+              <div class="mt-8 flex flex-wrap gap-4">
+                <a href="mailto:mukundahire.work@gmail.com" class="inline-flex items-center gap-2 font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    mukundahire.work@gmail.com
+                </a>
+                <a href="tel:+919175259366" class="inline-flex items-center gap-2 font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    +91 9175259366
+                </a>
+              </div>
+            </div>
 
-      <!-- Projects Section -->
-      <section id="projects" class="bg-gray-100 dark:bg-gray-800 py-16 px-6 md:px-16" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-6 border-b-4 border-indigo-500 inline-block">Projects</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
-            <h3 class="text-xl font-semibold mb-2">📈 What I’m Working On</h3>
-            <p class="text-gray-700 dark:text-gray-300">
-                <li>🤖 AI-based urban intelligence platform (CitySense 🌆)</li>
-                <li>🎯 Building ML models for predictive analytics</li>
-                <li>🌐 Designing personal portfolio and microservices with React + Firebase</li>
-                <li>🖥️ Tech Stack: React, Firebase, Gemini AI</li></p><br>
-            <a href="#" class="text-indigo-600 dark:text-indigo-400">View on GitHub →</a>
+            <div class="lg:col-span-2">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Education</h3>
+              <div class="space-y-6">
+                <div>
+                  <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400">June 2021 – Present</p>
+                  <h4 class="text-lg font-semibold text-gray-900 dark:text-white">B.E in Information Technology</h4>
+                  <p class="text-sm font-normal text-gray-500 dark:text-gray-400">NBN Sinhgad Technical Institutes Campus, Pune</p>
+                  <p class="text-sm font-normal text-gray-500 dark:text-gray-400">GPA: 7.27/10.0</p>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400">June 2020 – July 2021</p>
+                  <h4 class="text-lg font-semibold text-gray-900 dark:text-white">H. S. C</h4>
+                  <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Nashik Presidency Junior College, Nashik</p>
+                  <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Percentage: 91.33/100</p>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400">June 2018 – June 2019</p>
+                  <h4 class="text-lg font-semibold text-gray-900 dark:text-white">S. S. C</h4>
+                  <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Shining Star Academy English Medium School, Nashik</p>
+                  <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Percentage: 88.80/100</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
-            <h3 class="text-xl font-semibold mb-2">📊 House Price Prediction</h3>
-            <p class="text-gray-700 dark:text-gray-300">
-                <li>🔍 Real-world housing data preprocessing</li>
-                <li>📊 Exploratory Data Analysis & visualization</li>
-                <li>📈 Linear Regression with RMSE evaluation</li>
-                <li>🛠️ Tech: Python, Pandas, Scikit-learn, Jupyter</li>
-            </p><br>
-            <a href="https://github.com/mukund-ahire/House-Price-Prediction" class="text-indigo-600 dark:text-indigo-400">View on GitHub →</a>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Skills Section -->
-      <section id="skills" class="py-16 px-6 md:px-16" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-6 border-b-4 border-indigo-500 inline-block">Skills</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
-          <div class="flex flex-col items-center bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 transition-transform hover:scale-105 hover:shadow-xl">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-12 h-12 mb-2">
-            <span class="text-sm">Java</span>
+        <section id="projects" class="bg-gray-100 dark:bg-gray-800 py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+          <div class="text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 border-b-4 border-indigo-500 inline-block">🚀 Projects</h2>
           </div>
-          <div class="flex flex-col items-center bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 transition-transform hover:scale-105 hover:shadow-xl">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12 mb-2">
-            <span class="text-sm">Python</span>
+          <div class="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">Time Loop Game with Amazon-Q-CLI</h3>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">Developed a 2D puzzle platformer in Pygame featuring a unique time-loop mechanic, where players interact with recordings of their past selves. The project features precise action syncing and a modular architecture, with debugging enhanced by Amazon Q CLI.</p>
+              <a href="#" class="text-indigo-600 dark:text-indigo-400 font-semibold mt-auto">View on GitHub →</a>
+            </div>
+            <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">House Price Prediction Model</h3>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">Developed a machine learning model to predict house prices, executing an end-to-end pipeline from data cleaning and EDA to feature engineering. Utilized regression algorithms and evaluated model accuracy with metrics like MAE and R-squared.</p>
+              <a href="https://github.com/mukund-ahire/House-Price-Prediction" class="text-indigo-600 dark:text-indigo-400 font-semibold mt-auto">View on GitHub →</a>
+            </div>
           </div>
-          <div class="flex flex-col items-center bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 transition-transform hover:scale-105 hover:shadow-xl">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-12 h-12 mb-2">
-            <span class="text-sm">Firebase</span>
-          </div>
-          <div class="flex flex-col items-center bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 transition-transform hover:scale-105 hover:shadow-xl">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-12 h-12 mb-2">
-            <span class="text-sm">React</span>
-          </div>
-          <div class="flex flex-col items-center bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 transition-transform hover:scale-105 hover:shadow-xl">
-            <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" class="w-12 h-12 mb-2">
-            <span class="text-sm">Tailwind CSS</span>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Blog Section -->
-      <section id="blog" class="bg-gray-100 dark:bg-gray-800 py-16 px-6 md:px-16" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-6 border-b-4 border-indigo-500 inline-block">Blog</h2>
-        <div class="space-y-4">
-          <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow hover:shadow-lg transition">
-            <h3 class="font-semibold">🧠 Building a Time Loop Puzzle Game</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-300">How I used AI and Python to design a replay-based puzzle game.</p>
-            <a href="https://medium.com/@mukundahire.work/building-a-time-loop-puzzle-game-with-python-amazon-q-cli-8ac6895bf32f" class="text-indigo-600 dark:text-indigo-400">Read More →</a>
-          </div>
-        </div>
-      </section>
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+            <div class="text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-12 border-b-4 border-indigo-500 inline-block">🛠️ Skills</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition-all hover:shadow-xl hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-4 h-4 mr-2" alt="Java"/>Java</span>
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-4 h-4 mr-2" alt="Python"/>Python</span>
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-4 h-4 mr-2" alt="JavaScript"/>JavaScript</span>
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-4 h-4 mr-2" alt="HTML5"/>HTML</span>
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-4 h-4 mr-2" alt="CSS3"/>CSS</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition-all hover:shadow-xl hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Frameworks & Libraries</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-4 h-4 mr-2" alt="React"/>React</span>
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" class="w-4 h-4 mr-2" alt="Tailwind CSS"/>Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition-all hover:shadow-xl hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Databases & Tools</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-4 h-4 mr-2" alt="MySQL"/>MySQL</span>
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-4 h-4 mr-2" alt="MongoDB"/>MongoDB</span>
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-4 h-4 mr-2" alt="Git"/>Git</span>
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-4 h-4 mr-2" alt="GitHub"/>GitHub</span>
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" class="w-4 h-4 mr-2" alt="Postman"/>Postman</span>
+                        <span class="inline-flex items-center bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-3 py-1 rounded-full text-sm font-medium"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" class="w-4 h-4 mr-2" alt="IntelliJ IDEA"/>IntelliJ IDEA</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition-all hover:shadow-xl hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Technical Concepts</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm font-medium">Core Java</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm font-medium">Data Structures & Algorithms</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm font-medium">OOPS</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm font-medium">DBMS</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm font-medium">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="py-16 px-6 md:px-16 bg-gray-100 dark:bg-gray-800" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-6 border-b-4 border-indigo-500 inline-block">Contact Me</h2>
-        <form action="https://formspree.io/f/your-form-id" method="POST" class="max-w-2xl mx-auto bg-white dark:bg-gray-900 shadow-md rounded-xl p-8 space-y-4">
-          <div>
-            <label for="name" class="block mb-1 font-semibold">Name</label>
-            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <section id="blog" class="bg-gray-100 dark:bg-gray-800 py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+          <div class="text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 border-b-4 border-indigo-500 inline-block">✍️ From My Blog</h2>
           </div>
-          <div>
-            <label for="email" class="block mb-1 font-semibold">Email</label>
-            <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+              <h3 class="font-semibold text-lg">From Curiosity to Capability: My Journey Through Google Cloud’s Gen AI Academy</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">A recap of my hands-on learning experience with cutting-edge generative AI tools on Google Cloud.</p>
+              <a href="https://medium.com/@mukundahire.work/from-curiosity-to-capability-my-journey-through-google-clouds-gen-ai-academy-17de7fc9f6ad" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold inline-block mt-auto pt-4">Read More →</a>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+              <h3 class="font-semibold text-lg">Building a Time Loop Puzzle Game with Python + Amazon Q CLI</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">How I used AI and Python to design a replay-based puzzle game from concept to code.</p>
+              <a href="https://medium.com/@mukundahire.work/building-a-time-loop-puzzle-game-with-python-amazon-q-cli-8ac6895bf32f" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold inline-block mt-auto pt-4">Read More →</a>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+              <h3 class="font-semibold text-lg">Exploring Generative AI with the Gemini API in Vertex AI</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Diving into the powerful capabilities of the Gemini API for generative AI tasks on Google Cloud.</p>
+              <a href="https://medium.com/@mukundahire.work/exploring-generative-ai-with-the-gemini-api-in-vertex-ai-my-learning-journey-a35cf78d1635" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold inline-block mt-auto pt-4">Read More →</a>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+              <h3 class="font-semibold text-lg">Inspecting Rich Documents with Gemini Multimodality and Multimodal RAG</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">A look at using Gemini's multimodal features to analyze and understand complex documents.</p>
+              <a href="https://medium.com/@mukundahire.work/inspecting-rich-documents-with-gemini-multimodality-and-multimodal-rag-f4c864309b71" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold inline-block mt-auto pt-4">Read More →</a>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+              <h3 class="font-semibold text-lg">Build GenAI-Powered Web Apps with Gemini and Streamlit</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">A guide to creating interactive web applications powered by Gemini's AI, using the Streamlit framework.</p>
+              <a href="https://medium.com/@mukundahire.work/build-genai-powered-web-apps-with-gemini-and-streamlit-1b9731b7de3e" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold inline-block mt-auto pt-4">Read More →</a>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+              <h3 class="font-semibold text-lg">Building Real-World AI Applications with Gemini and Imagen on Google Cloud</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Practical examples of developing applications with Gemini and Imagen on the Google Cloud platform.</p>
+              <a href="https://medium.com/@mukundahire.work/building-real-world-ai-applications-with-gemini-and-imagen-on-google-cloud-e94f65171fa2" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold inline-block mt-auto pt-4">Read More →</a>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+              <h3 class="font-semibold text-lg">Mastering Prompt Design with Vertex AI: My Learning Journey</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Insights and key takeaways from learning advanced prompt engineering techniques with Vertex AI.</p>
+              <a href="https://medium.com/@mukundahire.work/mastering-prompt-design-with-vertex-ai-my-learning-journey-into-generative-ai-a7bdf3da6173" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold inline-block mt-auto pt-4">Read More →</a>
+            </div>
           </div>
-          <div>
-            <label for="message" class="block mb-1 font-semibold">Message</label>
-            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-          </div>
-          <button type="submit" class="px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition">Send Message</button>
-        </form>
-      </section>
+        </section>
 
-      <!-- Footer -->
-      <footer class="border-t border-gray-300 dark:border-gray-700 mt-24 py-8 text-center text-sm text-gray-600 dark:text-gray-400">
-        <div class="max-w-4xl mx-auto px-4 space-y-4">
-          <p>&copy; 2025 Mukund Ahire. Built with ❤️ using Tailwind CSS.</p>
-          <div class="flex justify-center items-center space-x-5 text-xl">
-            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-500 transition-colors" aria-label="GitHub">
-              🐙
+        <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+          <div class="text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 border-b-4 border-indigo-500 inline-block">🏆 Leadership & Activities</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">ALumini Section Head - IT Newsletter</h3>
+              <p class="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4">NBNSTIC, Pune</p>
+              <p class="text-gray-700 dark:text-gray-300">Led the Alumni Section for the IT Newsletter at NBNSTIC Pune, curating content and managing communications to foster a vibrant alumni network.</p>
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="text-xl font-semibold mb-2">Documentation Head - Sports Committee</h3>
+              <p class="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4">NBNSTIC, Pune</p>
+              <p class="text-gray-700 dark:text-gray-300">Oversaw comprehensive documentation processes for the Sports Committee at NBNSTIC Pune, streamlining record-keeping and communication across events and activities.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="bg-gray-100 dark:bg-gray-800 py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+           <div class="text-center">
+             <h2 class="text-3xl sm:text-4xl font-bold mb-4 border-b-4 border-indigo-500 inline-block">📬 Contact Me</h2>
+             <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">Have a question or a project in mind? I'd love to hear from you. Let's create something amazing together.</p>
+           </div>
+          <form action="https://formspree.io/f/your-form-id" method="POST" class="max-w-2xl mx-auto bg-white dark:bg-gray-900 shadow-xl rounded-xl p-8 mt-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block mb-1 font-semibold">Name</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              </div>
+              <div>
+                <label for="email" class="block mb-1 font-semibold">Email</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              </div>
+            </div>
+            <div class="mt-6">
+              <label for="message" class="block mb-1 font-semibold">Message</label>
+              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            </div>
+            <div class="mt-6">
+              <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium rounded-md hover:from-indigo-600 hover:to-purple-700 transition-all shadow-lg transform hover:scale-105">Send Message</button>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <footer class="w-full border-t border-gray-200 dark:border-gray-700/40 bg-white/95 dark:bg-gray-900/95 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto flex flex-col items-center justify-between gap-6 py-8 md:h-24 md:flex-row md:py-0">
+          <div class="flex flex-col items-center gap-2 text-center md:flex-row md:gap-2 md:text-left">
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+              Designed & Built with ❤️ by Mukund Ahire. &copy; 2025 All rights reserved.
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <a href="mailto:mukundahire.work@gmail.com" aria-label="Email" class="p-2 text-gray-500 hover:text-indigo-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             </a>
-            <a href="https://linkedin.com/in/your-link" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-500 transition-colors" aria-label="LinkedIn">
-              🔗
+            <a href="tel:+919175259366" aria-label="Phone" class="p-2 text-gray-500 hover:text-indigo-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </a>
-            <a href="mailto:youremail@example.com" class="hover:text-indigo-500 transition-colors" aria-label="Email">
-              ✉️
+            <a href="https://github.com/mukund-ahire" target="_blank" aria-label="Github" class="p-2 text-gray-500 hover:text-indigo-600">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/mukund-ahire/" target="_blank" aria-label="LinkedIn" class="p-2 text-gray-500 hover:text-indigo-600">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             </a>
           </div>
         </div>
       </footer>
     </div>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
 
+      // Dark Mode Toggle
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const storedTheme = localStorage.getItem('theme');
       const isDark = storedTheme === 'dark' || (!storedTheme && prefersDark);
@@ -238,23 +369,27 @@
         localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
       }
 
-      const darkToggle = document.getElementById('darkToggle');
-      if (darkToggle) darkToggle.addEventListener('click', toggleTheme);
-
-      const darkToggleMobile = document.getElementById('darkToggleMobile');
-      if (darkToggleMobile) darkToggleMobile.addEventListener('click', toggleTheme);
-
+      document.getElementById('darkToggle').addEventListener('click', toggleTheme);
+      
+      // Typed.js Animation
       new Typed('#typed', {
-        strings: ['Final-year IT Student.', 'Aspiring AI Engineer.', 'Problem Solver.', 'Tech Explorer.'],
+        strings: [
+          'Aspiring AI Engineer',
+          'Problem Solver',
+          'Learning by Building',
+        ],
         typeSpeed: 50,
-        backSpeed: 25,
-        backDelay: 2000,
-        loop: true
+        backSpeed: 30,
+        loop: true,
+        showCursor: true,
+        cursorChar: '_',
       });
 
+      // Mobile Menu Toggle
       const navToggle = document.getElementById('navToggle');
       const navClose = document.getElementById('navClose');
       const mobileMenu = document.getElementById('mobileMenu');
+      const navLinks = mobileMenu.querySelectorAll('a');
 
       if (navToggle && navClose && mobileMenu) {
         navToggle.addEventListener('click', () => {
@@ -264,29 +399,14 @@
         navClose.addEventListener('click', () => {
           mobileMenu.classList.add('translate-x-full');
         });
-      }
-
-      // EmailJS setup
-      emailjs.init('ttQzSvJzmBRoISgv9');
-      const contactForm = document.querySelector('#contact form');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          emailjs.sendForm('service_0zmup57', 'template_nriee7s', this)
-            .then(() => {
-              alert('✅ Message sent successfully!');
-              this.reset();
-            }, (error) => {
-              alert('❌ Failed to send message.\n' + JSON.stringify(error));
+        
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
             });
         });
       }
-
-      // Page transition effect
-      window.addEventListener('DOMContentLoaded', () => {
-        const wrapper = document.getElementById('page-wrapper');
-        if (wrapper) wrapper.classList.remove('fade-enter');
-      });
     </script>
   </body>
 </html>
